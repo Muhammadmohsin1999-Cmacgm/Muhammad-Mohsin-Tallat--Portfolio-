@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#101c2b" />
+    <title>Page not found | Muhammad Mohsin Tallat</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .error-page {
+        display: grid;
+        min-height: 100svh;
+        place-items: center;
+        padding: 2rem;
+        text-align: center;
+      }
+      .error-content {
+        max-width: 560px;
+      }
+      .error-code {
+        margin: 0;
+        color: #c2e89a;
+        font-size: clamp(6rem, 25vw, 11rem);
+        font-weight: 700;
+        letter-spacing: -0.09em;
+        line-height: 1;
+      }
+      .error-content h1 {
+        margin: 1rem 0;
+        font-size: clamp(1.7rem, 5vw, 2.5rem);
+      }
+      .error-content p {
+        margin-bottom: 2rem;
+        color: #a4b2c2;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="error-page">
+      <div class="error-content">
+        <p class="error-code">404</p>
+        <h1>This page is off the route.</h1>
+        <p>The page you’re looking for may have moved. Head back to the portfolio homepage.</p>
+        <a class="button button-primary" href="/">Back to homepage <span aria-hidden="true">↗</span></a>
+      </div>
+    </main>
+  </body>
+</html>

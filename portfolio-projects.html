@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Interactive independent portfolio apps for employee tracking, inventory control, fleet dispatch and safety actions."
+    />
+    <meta name="theme-color" content="#101c2b" />
+    <title>Operations App Lab | Muhammad Mohsin Tallat</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="portfolio-projects.css" />
+    <script src="portfolio-projects.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#app-main">Skip to project</a>
+    <header class="app-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">MMT<span>.</span></a>
+        <a class="back-link" href="index.html#projects">← Back to portfolio</a>
+      </div>
+    </header>
+
+    <main id="app-main" class="app-shell">
+      <section class="intro">
+        <p class="eyebrow">Independent portfolio builds · Operations App Lab</p>
+        <h1 id="app-title">Operations dashboard</h1>
+        <p id="app-description" class="intro-copy"></p>
+        <div class="demo-notice" role="note">
+          <span class="notice-dot" aria-hidden="true"></span>
+          <p>
+            Interactive prototype with sample records. Changes are saved in
+            this browser only; there is no server, shared live database, or
+            connection to an employer system.
+          </p>
+        </div>
+      </section>
+
+      <nav class="app-switcher" aria-label="Portfolio app demos">
+        <a href="?app=employees" data-app-link="employees">Employee tracker</a>
+        <a href="?app=inventory" data-app-link="inventory">Inventory tracker</a>
+        <a href="?app=fleet" data-app-link="fleet">Fleet dispatch</a>
+        <a href="?app=safety" data-app-link="safety">Safety register</a>
+      </nav>
+
+      <section class="dashboard" aria-labelledby="workspace-title">
+        <div class="dashboard-heading">
+          <div>
+            <p class="eyebrow">Workspace</p>
+            <h2 id="workspace-title">Overview</h2>
+          </div>
+          <button class="button button-quiet" id="reset-demo" type="button">
+            Restore sample data
+          </button>
+        </div>
+        <div class="metric-grid" id="metrics" aria-live="polite"></div>
+
+        <div class="workspace-grid">
+          <section class="panel form-panel" aria-labelledby="form-title">
+            <div class="panel-heading">
+              <p class="eyebrow">Add a record</p>
+              <h2 id="form-title">New entry</h2>
+            </div>
+            <form id="record-form" novalidate>
+              <div class="form-fields" id="form-fields"></div>
+              <button class="button button-primary" id="submit-record" type="submit">
+                Add record
+              </button>
+            </form>
+          </section>
+
+          <section class="panel records-panel" aria-labelledby="records-title">
+            <div class="panel-heading records-heading">
+              <div>
+                <p class="eyebrow">Manage records</p>
+                <h2 id="records-title">Records</h2>
+              </div>
+              <label class="search-field">
+                <span class="visually-hidden">Search records</span>
+                <input id="record-search" type="search" placeholder="Search…" />
+              </label>
+            </div>
+            <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+            <div class="table-wrap">
+              <table>
+                <thead id="records-head"></thead>
+                <tbody id="records-body"></tbody>
+              </table>
+            </div>
+            <p class="table-empty" id="empty-state" hidden>
+              No matching records. Add one using the form.
+            </p>
+          </section>
+        </div>
+      </section>
+      <footer class="app-footer">
+        Personal portfolio prototype · Built with HTML, CSS and JavaScript
+      </footer>
+    </main>
+  </body>
+</html>
