@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Add the full sitemap URL after choosing and connecting your custom domain.
+Sitemap: https://muhammadmohsin1999-cmacgm.github.io/Muhammad-Mohsin-Tallat--Portfolio-/sitemap.xml
